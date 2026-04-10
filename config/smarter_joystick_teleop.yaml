@@ -1,0 +1,30 @@
+smarter_joystick_teleop:
+  ros__parameters:
+    global_frame: map
+    base_frame: base_link
+    cmd_vel_frame_id: base_link
+    enable_stamped_cmd_vel: true
+
+    joy_topic: /joy
+    cmd_vel_topic: /cmd_vel
+    nav_action_name: navigate_to_pose
+
+    # Joy mapping based on your provided data
+    axis_linear: 1
+    axis_angular: 3
+    estop_toggle_button: 5
+    submode_toggle_button: 4
+
+    max_linear_speed: 1.0
+    max_angular_speed: 1.2
+    linear_deadzone: 0.05
+    angular_deadzone: 0.05
+
+    assisted_max_distance: 2.0
+    assisted_max_heading: 0.8
+    assisted_distance_deadzone: 0.15
+    assisted_heading_deadzone: 0.15
+    assisted_goal_period_sec: 0.25
+
+    joy_timeout_sec: 1.0
+    watchdog_period_sec: 0.1
